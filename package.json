@@ -1,0 +1,19 @@
+{
+  "name": "react-in-vue",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "home",
+    "layout"
+  ],
+  "scripts": {
+    "build": "pnpm  --parallel --filter \"./**\" build",
+    "serve": "pnpm  --parallel --filter \"./**\" serve",
+    "stop": "kill-port --port 5174",
+    "dev": "pnpm --parallel --filter \"./**\" dev"
+  },
+  "devDependencies": {
+    "@originjs/vite-plugin-federation": "workspace:*",
+    "kill-port": "^2.0.1"
+  }
+}
