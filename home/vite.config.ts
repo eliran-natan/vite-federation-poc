@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [
     reactRefresh(),
     federation({
-      name: 'axonius',
+      name: 'axoniusX',
       filename: 'remoteEntry.js',
       exposes: {
         './Button': './src/Button.jsx'

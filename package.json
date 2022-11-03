@@ -4,7 +4,8 @@
   "version": "1.0.0",
   "workspaces": [
     "home",
-    "layout"
+    "layout",
+    "axonius-app"
   ],
   "scripts": {
     "build": "pnpm  --parallel --filter \"./**\" build",

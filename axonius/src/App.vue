@@ -1,45 +1,6 @@
 <script setup>
 
-import { computed, defineAsyncComponent, reactive } from "vue";
-import ReactDOMServer from "react-dom/server";
-import Welcome from './Welcome.vue';
-
-const view = reactive({
-  framework: 'Vue',
-  component: Welcome
-})
-
-function gotoWelcome() {
-    view.component = Welcome
-    view.framework = 'Vue'
-}
-
-function fetchAxoniusDashboard() {
-    view.component = defineAsyncComponent(() =>
-        import("axonius/Dashboard")
-    )
-    view.framework = "Vue"
-}
-
-async function fetchAxoniusXDashboard() {
-    view.component = await new Promise(async (resolve, reject) => {
-        try {
-            const res = (await import("axoniusX/Button")).default;
-            resolve(ReactDOMServer.renderToString(res()))
-        } catch (err) {
-            reject(err);
-        }
-    });
-    view.framework = "React"
-}
-
-const component = computed(() => {
-  return view.component
-})
-
-const framework = computed(() => {
-  return view.framework
-})
+import Card from './components/Card.vue'
 
 const SidebarItem = {
   props: ['title', 'info'],
@@ -58,7 +19,6 @@ const SidebarItem = {
 </script>
 
 <template>
-    <div>
         <div class="app">
             <SuspenseWithErrors>
                 <template #error="props">
@@ -68,25 +28,21 @@ const SidebarItem = {
                 </template>
                 <template #default>
                         <div class="top-bar">
-                            
+                          Axonius App (Vue on Vite)
                         </div>
                         <div class="main">
                             <div class="side-bar-panel">
                                 <div class="side-bar">
-                                    <sidebar-item title="Welcome" @click="gotoWelcome()"/>
-                                    <sidebar-item title="Axonius/Dashboard" @click="fetchAxoniusDashboard()"/>
-                                    <sidebar-item title="AxoniusX/Dashboard" @click="fetchAxoniusXDashboard()"/>
-                                    <sidebar-item title="Mix" @click="load('AxoniusDashboard')"/>
+                                    <sidebar-item title="Menu Item 1" />
+                                    <sidebar-item title="Menu Item 2"/>
+                                    <sidebar-item title="Menu Item 3"/>
                                 </div>
                             </div>
                             <div class="content">
-                                <div v-if="framework">
-                                    <component v-if="framework == 'Vue'" :is="component"></component>
-                                    <div v-if="framework == 'React'" v-html="component"></div>
-                                </div>
+                              <Card/>
+                              <Card/>
                             </div>
-                        </div>
-                 
+                        </div>   
                 </template>
                 <template #fallback>
                     <div class="space-up">
@@ -95,7 +51,6 @@ const SidebarItem = {
                 </template>
             </SuspenseWithErrors>
         </div>
-    </div>
 </template>
 
 <style lang="scss" scoped>
@@ -108,9 +63,10 @@ const SidebarItem = {
     .top-bar {
         width: 100%;
         height: 120px;
-        //border: 2px dashed #42b883;
-
-        background-color: #20c997;
+        color: white; 
+        padding: 40px;
+        font-size: 30px;
+        background-color: #dc3545;
         box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%), inset 0 -1px 0 rgb(0 0 0 / 15%);
     }
     .main {
@@ -125,7 +81,7 @@ const SidebarItem = {
         width: 350px;
         margin-right: 20px;
         box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%), inset 0 -1px 0 rgb(0 0 0 / 15%);
-        background-color: #7632f9;
+        background-color: #dc3545;
         color: white;
     }
     .content {
@@ -133,9 +89,8 @@ const SidebarItem = {
         width: 100%;
         background-color: #f8f9fa;
         border-radius: 10px;
-        div {
-            width: 100%;
-        }
+        justify-content: space-around;
+        padding: 50px;
     }
     .side-bar {
         display: flex;

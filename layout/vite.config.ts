@@ -15,11 +15,13 @@ export default defineConfig({
       name: 'layout',
       filename: 'remoteEntry.js',
       remotes: {
-        axonius: 'http://localhost:5001/assets/remoteEntry.js'
+        axonius: 'http://localhost:5001/assets/remoteEntry.js',
+        axoniusX: 'http://localhost:5002/assets/remoteEntry.js',
       }
     })
   ],
   build: {
-    minify: true
+    minify: true,
+    target: 'esnext'
   }
 })

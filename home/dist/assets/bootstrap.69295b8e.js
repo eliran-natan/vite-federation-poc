@@ -1,4 +1,4 @@
-import Button, { R as React, r as react, o as objectAssign, g as getDefaultExportFromCjs } from './__federation_expose_Button.8e81efc6.js';
+import Button, { R as React, r as react, o as objectAssign, g as getDefaultExportFromCjs } from './__federation_expose_Button.7bb20a41.js';
 
 const App = () => /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("h1", null, "Basic Host-Remote"), /* @__PURE__ */ React.createElement("h2", null, "Home"), /* @__PURE__ */ React.createElement(Button, null));
 
