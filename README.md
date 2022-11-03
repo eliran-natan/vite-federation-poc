@@ -1,12 +1,20 @@
-# React in Vue - Module Federation Demo
+# Module Federation with Vite - POC
 
-This example demos consumption of federated modules from a vite bundle. `layout` app (vue based) depends on a component exposed by `home` app (react based). It is a simple proof of concept using `ReactDOMServer.renderToString` to inject data a html string into a vue template.
+This example demos consumption of federated modules from a vite bundle. The `Shell` app (Vue based) displays components exposed by the `Axonius` app (Vue based) and by the `AxoniusX` app (React based). 
 
-## Running Demo
+## Running the Shell App
 
-First, `cd packages/examples/react-in-vue`, then run `pnpm build` and `pnpm serve`. This will build and serve both `home` and `layout` on ports 5000, 5001 respectively.
+1. Install node dependencies for shell application and for each child application. That is, for both `Shell`, `Axonius` and `AxoniusX`, `cd` to the root directory and run `npm i`. 
+2. At the root directory, run `pnpm build` and `pnpm serve`. This will build and serve the `Shell` app on port 5000, the `Axonius` app on port 5001, and the `AxoniusX` app on port 5002. 
 
-- HOST (layout): [localhost:5000](http://localhost:5000/)
-- REMOTE (home): [localhost:5001](http://localhost:5001/)
+- HOST (Shell): [localhost:5000](http://localhost:5000/)
+- REMOTE (Axonius): [localhost:5001](http://localhost:5001/)
+- REMOTE (AxoniusX): [localhost:5002](http://localhost:5002/)
 
-`CTRL + C` can only stop the host server. You can run `pnpm stop` to stop all services.
+## Development (+ Hot reload included)
+To develope each app (either child or shell), `cd` to its root directory and run `pnpm run dev`. 
+
+## Destroy 
+`CTRL + C` will only stop the shell app. Run `pnpm stop` from the shell app root directory to stop all other apps.
+
+
