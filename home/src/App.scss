@@ -43,6 +43,21 @@
     padding: 20px;
 }  
 
+.axoniusx-dashboard {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    color: #0d6efd;
+  }
+  
+  .axoniusx-card-panel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 50px;
+  }
+
 .axoniusx-side-bar-item {
     width: 100%;
     padding: 20px;
@@ -53,21 +68,14 @@
     cursor: pointer;
 }
 
-.axoniusx-cards-panel {
-    display: flex;
-    justify-content: center;
-}
-
 .axoniusx-card {
     width: 220px;
-    max-width: 220px;
-    flex-grow: 0;
     height: 300px;
     background-color: white;
-    border: 1px solid #0d6efd;
     border-radius: 10px;
     text-align: center;
     padding: 50px;
     font-size: 25px;
     color: #0d6efd;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }

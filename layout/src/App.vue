@@ -14,9 +14,14 @@ function gotoWelcome() {
     view.framework = 'Vue'
 }
 
-function fetchAxonius2Dashboard() {
+function gotoMix() {
+    view.component = Welcome
+    view.framework = 'Vue'
+}
+
+function fetchAxoniusDashboard() {
     view.component = defineAsyncComponent(() =>
-        import("axonius2/Dashboard")
+        import("axonius/Dashboard")
     )
     view.framework = "Vue"
 }
@@ -74,9 +79,9 @@ const SidebarItem = {
                             <div class="shell-side-bar-panel">
                                 <div class="shell-side-bar">
                                     <sidebar-item title="Welcome" @click="gotoWelcome()"/>
-                                    <sidebar-item title="Axonius/Dashboard" @click="fetchAxonius2Dashboard()"/>
+                                    <sidebar-item title="Axonius/Dashboard" @click="fetchAxoniusDashboard()"/>
                                     <sidebar-item title="AxoniusX/Dashboard" @click="fetchAxoniusXDashboard()"/>
-                                    <sidebar-item title="Mix" @click="load('AxoniusDashboard')"/>
+                                    <sidebar-item title="Mix" @click="gotoMix()"/>
                                 </div>
                             </div>
                             <div class="shell-content">
@@ -133,6 +138,7 @@ const SidebarItem = {
         width: 100%;
         background-color: #f8f9fa;
         border-radius: 10px;
+        justify-content: center;
     }
     .shell-side-bar {
         display: flex;

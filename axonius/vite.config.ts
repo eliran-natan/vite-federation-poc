@@ -1,14 +1,15 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import federation from '@originjs/vite-plugin-federation'
-import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js'
-import ElementPlus from 'unplugin-element-plus/vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  resolve: {
+    alias: {
+      vue: 'vue/dist/vue.esm-bundler.js'
+    }
+  },
   plugins: [
-    ElementPlus(),
-    cssInjectedByJsPlugin(),
     vue(),
     federation({
       name: 'axonius',
@@ -16,12 +17,12 @@ export default defineConfig({
       exposes: {
           './Dashboard': './src/components/Dashboard.vue',
           './Card': './src/components/Card.vue'
-      },
-      shared: ['vue', 'pinia']
+      }
     })
   ],
   build: {
-    minify: false,
-    target: 'esnext'
- }
+    minify: true,
+    target: 'esnext',
+    cssCodeSplit: false
+  }
 })

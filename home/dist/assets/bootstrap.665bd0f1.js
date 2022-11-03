@@ -1,5 +1,5 @@
 import { R as React, r as react, o as objectAssign, g as getDefaultExportFromCjs } from './__federation_expose_Card.113f27ae.js';
-import Dashboard from './__federation_expose_Dashboard.12a2a682.js';
+import Dashboard from './__federation_expose_Dashboard.48e3cedc.js';
 
 const App = () => /* @__PURE__ */ React.createElement("div", {
   className: "axoniusx-app"

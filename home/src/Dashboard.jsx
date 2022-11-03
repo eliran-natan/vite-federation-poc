@@ -4,13 +4,14 @@ import './App.scss';
 import Card from './Card';
 
 const Dashboard = () => (
-      <div className="axoniusx-content">
-        <div class="axoniusx-cards-panel">
-          <Card/>
-          <Card/>
-          <Card/>
+    <div class="axoniusx-dashboard">
+        <h1>Welcome to the AxoniusX Dashboard</h1>
+        <h2>Made with React + Vite</h2>
+        <div class="axoniusx-card-panel">
+            <Card/>
+            <Card/>
         </div>
-      </div>
+     </div>
 );
 
 export default Dashboard;

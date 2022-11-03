@@ -1,0 +1,1 @@
+import a,{c as o,b as e,a as s,o as t}from"./__federation_expose_Card.3053716c.js";const _={class:"axonius-dashboard"},c=e("h1",null,"Welcome to the Axonius Dashboard",-1),n=e("h2",null,"Made with Vue + Vite",-1),d={class:"axonius-card-panel"},u={__name:"Dashboard",setup(r){return(i,l)=>(t(),o("div",_,[c,n,e("div",d,[s(a),s(a)])]))}};export{u as default};

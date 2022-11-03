@@ -1,1 +1,0 @@
-import a,{c as e,a as s,b as o,o as t}from"./__federation_expose_Card.20fb4054.js";const r={class:"axonius-dashboard"},c=o("h1",null,"This is the Axonius Dashboard",-1),i={__name:"Dashboard",setup(n){return(_,d)=>(t(),e("div",r,[c,s(a),s(a)]))}};export{i as default};

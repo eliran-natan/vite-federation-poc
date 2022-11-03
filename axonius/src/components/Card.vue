@@ -1,17 +1,17 @@
 <template>
-  <div class="card">Axonius Card</div>
+  <div class="axonius-card">Axonius2 Card</div>
 </template>
 
-<style scoped>
-.card {
+<style>
+.axonius-card {
     width: 220px;
     height: 300px;
     background-color: white;
-    border: 1px solid #dc3545;
     border-radius: 10px;
     text-align: center;
     padding: 50px;
     font-size: 25px;
     color: #dc3545;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 </style>

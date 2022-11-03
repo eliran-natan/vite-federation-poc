@@ -1,6 +1,7 @@
 <script setup>
 
 import Card from './components/Card.vue'
+import Dashboard from './components/Dashboard.vue'
 
 const SidebarItem = {
   props: ['title', 'info'],
@@ -19,7 +20,7 @@ const SidebarItem = {
 </script>
 
 <template>
-        <div class="app">
+        <div class="axonius-app">
             <SuspenseWithErrors>
                 <template #error="props">
                     <p class="center error space-up">
@@ -27,20 +28,19 @@ const SidebarItem = {
                     </p>
                 </template>
                 <template #default>
-                        <div class="top-bar">
+                        <div class="axonius-top-bar">
                           Axonius App (Vue on Vite)
                         </div>
-                        <div class="main">
-                            <div class="side-bar-panel">
-                                <div class="side-bar">
+                        <div class="axonius-main">
+                            <div class="axonius-side-bar-panel">
+                                <div class="axonius-side-bar">
                                     <sidebar-item title="Menu Item 1" />
                                     <sidebar-item title="Menu Item 2"/>
                                     <sidebar-item title="Menu Item 3"/>
                                 </div>
                             </div>
-                            <div class="content">
-                              <Card/>
-                              <Card/>
+                            <div class="axonius-content">
+                              <Dashboard/>
                             </div>
                         </div>   
                 </template>
@@ -53,14 +53,14 @@ const SidebarItem = {
         </div>
 </template>
 
-<style lang="scss" scoped>
-    .app {
+<style lang="scss">
+    .axonius-app {
         display: flex;
         width: 100%;
         height: 100%;
         flex-direction: column;
     }
-    .top-bar {
+    .axonius-top-bar {
         width: 100%;
         height: 120px;
         color: white; 
@@ -69,14 +69,14 @@ const SidebarItem = {
         background-color: #dc3545;
         box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%), inset 0 -1px 0 rgb(0 0 0 / 15%);
     }
-    .main {
+    .axonius-main {
         display: flex;
         justify-content: space-between;
         width: 100%;
         height: calc(100vh - 260px);
         margin-top: 20px;
     }
-    .side-bar-panel {
+    .axonius-side-bar-panel {
         display: flex;
         width: 350px;
         margin-right: 20px;
@@ -84,7 +84,7 @@ const SidebarItem = {
         background-color: #dc3545;
         color: white;
     }
-    .content {
+    .axonius-content {
         display: flex;
         width: 100%;
         background-color: #f8f9fa;
@@ -92,7 +92,7 @@ const SidebarItem = {
         justify-content: space-around;
         padding: 50px;
     }
-    .side-bar {
+    .axonius-side-bar {
         display: flex;
         width: 100%;
         flex-direction: column;
