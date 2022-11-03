@@ -59,7 +59,7 @@ const SidebarItem = {
 
 <template>
     <div>
-        <div class="app">
+        <div class="shell-app">
             <SuspenseWithErrors>
                 <template #error="props">
                     <p class="center error space-up">
@@ -67,26 +67,25 @@ const SidebarItem = {
                     </p>
                 </template>
                 <template #default>
-                        <div class="top-bar">
+                        <div class="shell-top-bar">
                             Shell App (Vue on Vite)
                         </div>
-                        <div class="main">
-                            <div class="side-bar-panel">
-                                <div class="side-bar">
+                        <div class="shell-main">
+                            <div class="shell-side-bar-panel">
+                                <div class="shell-side-bar">
                                     <sidebar-item title="Welcome" @click="gotoWelcome()"/>
                                     <sidebar-item title="Axonius/Dashboard" @click="fetchAxonius2Dashboard()"/>
                                     <sidebar-item title="AxoniusX/Dashboard" @click="fetchAxoniusXDashboard()"/>
                                     <sidebar-item title="Mix" @click="load('AxoniusDashboard')"/>
                                 </div>
                             </div>
-                            <div class="content">
+                            <div class="shell-content">
                                 <div v-if="framework">
                                     <component v-if="framework == 'Vue'" :is="component"></component>
                                     <div v-if="framework == 'React'" v-html="component"></div>
                                 </div>
                             </div>
                         </div>
-                 
                 </template>
                 <template #fallback>
                     <div class="space-up">
@@ -99,28 +98,29 @@ const SidebarItem = {
 </template>
 
 <style lang="scss" scoped>
-    .app {
+    .shell-app {
         display: flex;
         width: 100%;
         height: 100%;
         flex-direction: column;
     }
-    .top-bar {
+    .shell-top-bar {
         width: 100%;
         height: 120px;
-        //border: 2px dashed #42b883;
-
-        background-color: #20c997;
+        color: white; 
+        padding: 40px;
+        font-size: 30px;
+        background-color:  #20c997;
         box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%), inset 0 -1px 0 rgb(0 0 0 / 15%);
     }
-    .main {
+    .shell-main {
         display: flex;
         justify-content: space-between;
         width: 100%;
         height: calc(100vh - 260px);
         margin-top: 20px;
     }
-    .side-bar-panel {
+    .shell-side-bar-panel {
         display: flex;
         width: 350px;
         margin-right: 20px;
@@ -128,13 +128,13 @@ const SidebarItem = {
         background-color: #7632f9;
         color: white;
     }
-    .content {
+    .shell-content {
         display: flex;
         width: 100%;
         background-color: #f8f9fa;
         border-radius: 10px;
     }
-    .side-bar {
+    .shell-side-bar {
         display: flex;
         width: 100%;
         flex-direction: column;
