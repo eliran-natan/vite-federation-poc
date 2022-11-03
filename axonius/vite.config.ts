@@ -14,7 +14,8 @@ export default defineConfig({
       name: 'axonius',
       filename: 'remoteEntry.js',
       exposes: {
-          './Dashboard': './src/components/Dashboard.vue'
+          './Dashboard': './src/components/Dashboard.vue',
+          './Card': './src/components/Card.vue'
       },
       shared: ['vue', 'pinia']
     })

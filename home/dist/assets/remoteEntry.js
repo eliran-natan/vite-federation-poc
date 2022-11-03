@@ -2,9 +2,12 @@ import { _ as __vitePreload } from './preload-helper.4cee51f5.js';
 
 const exportSet = new Set(['Module', '__esModule', 'default', '_export_sfc']);
       let moduleMap = {
-"./Button":()=>{
-      dynamicLoadingCss(["style.8e52cbc8.css"]);
-      return __federation_import('./__federation_expose_Button.7bb20a41.js').then(module =>Object.keys(module).every(item => exportSet.has(item)) ? () => module.default : () => module)},};
+"./Dashboard":()=>{
+      dynamicLoadingCss(["style.c9572158.css"]);
+      return __federation_import('./__federation_expose_Dashboard.12a2a682.js').then(module =>Object.keys(module).every(item => exportSet.has(item)) ? () => module.default : () => module)},
+"./Card":()=>{
+      dynamicLoadingCss(["style.c9572158.css"]);
+      return __federation_import('./__federation_expose_Card.113f27ae.js').then(module =>Object.keys(module).every(item => exportSet.has(item)) ? () => module.default : () => module)},};
     const seen = {};
     const dynamicLoadingCss = (cssFilePaths) => {
       const metaUrl = import.meta.url;

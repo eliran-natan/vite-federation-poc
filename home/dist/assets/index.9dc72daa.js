@@ -44,4 +44,6 @@ true&&(function polyfill() {
     }
 }());
 
-__vitePreload(() => import('./bootstrap.69295b8e.js'),true?["assets/bootstrap.69295b8e.js","assets/__federation_expose_Button.7bb20a41.js"]:void 0);
+const style = '';
+
+__vitePreload(() => import('./bootstrap.aeb03f14.js'),true?["assets/bootstrap.aeb03f14.js","assets/__federation_expose_Card.113f27ae.js","assets/__federation_expose_Dashboard.12a2a682.js"]:void 0);

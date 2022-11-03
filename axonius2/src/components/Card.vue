@@ -1,9 +1,9 @@
 <template>
-  <div class="card">Axonius Card</div>
+  <div class="axonius2-card">Axonius2 Card</div>
 </template>
 
-<style scoped>
-.card {
+<style>
+.axonius2-card {
     width: 220px;
     height: 300px;
     background-color: white;

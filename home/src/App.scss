@@ -1,10 +1,10 @@
-.app {
+.axoniusx-app {
     display: flex;
     width: 100%;
     height: 100%;
     flex-direction: column;
 }
-.top-bar {
+.axoniusx-top-bar {
     width: 100%;
     height: 120px;
     background-color: #0d6efd;
@@ -13,14 +13,14 @@
     font-size: 30px;
     padding: 40px;
 }
-.main {
+.axoniusx-main {
     display: flex;
     justify-content: space-between;
     width: 100%;
     height: calc(100vh - 260px);
     margin-top: 20px;
 }
-.side-bar-panel {
+.axoniusx-side-bar-panel {
     display: flex;
     width: 350px;
     margin-right: 20px;
@@ -28,7 +28,7 @@
     background-color: #0d6efd;
     color: white;
 }
-.content {
+.axoniusx-content {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -36,14 +36,14 @@
     border-radius: 10px;
     padding: 60px;
 }
-.side-bar {
+.axoniusx-side-bar {
     display: flex;
     width: 100%;
     flex-direction: column;
     padding: 20px;
 }  
 
-.side-bar-item {
+.axoniusx-side-bar-item {
     width: 100%;
     padding: 20px;
     border-radius: 6px;
@@ -53,12 +53,12 @@
     cursor: pointer;
 }
 
-.cards-panel {
+.axoniusx-cards-panel {
     display: flex;
     justify-content: center;
 }
 
-.card {
+.axoniusx-card {
     width: 220px;
     max-width: 220px;
     flex-grow: 0;

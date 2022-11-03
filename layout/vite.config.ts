@@ -17,6 +17,7 @@ export default defineConfig({
       remotes: {
         axonius: 'http://localhost:5001/assets/remoteEntry.js',
         axoniusX: 'http://localhost:5002/assets/remoteEntry.js',
+        axonius2: 'http://localhost:5003/assets/remoteEntry.js',
       }
     })
   ],

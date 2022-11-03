@@ -1,6 +1,23 @@
-import Button, { R as React, r as react, o as objectAssign, g as getDefaultExportFromCjs } from './__federation_expose_Button.7bb20a41.js';
+import { R as React, r as react, o as objectAssign, g as getDefaultExportFromCjs } from './__federation_expose_Card.113f27ae.js';
+import Dashboard from './__federation_expose_Dashboard.12a2a682.js';
 
-const App = () => /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("h1", null, "Basic Host-Remote"), /* @__PURE__ */ React.createElement("h2", null, "Home"), /* @__PURE__ */ React.createElement(Button, null));
+const App = () => /* @__PURE__ */ React.createElement("div", {
+  className: "axoniusx-app"
+}, /* @__PURE__ */ React.createElement("div", {
+  className: "axoniusx-top-bar"
+}, "AxoniusX App (React on Vite)"), /* @__PURE__ */ React.createElement("div", {
+  className: "axoniusx-main"
+}, /* @__PURE__ */ React.createElement("div", {
+  className: "axoniusx-side-bar-panel"
+}, /* @__PURE__ */ React.createElement("div", {
+  className: "axoniusx-side-bar"
+}, /* @__PURE__ */ React.createElement("div", {
+  className: "axoniusx-side-bar-item"
+}, "Menu Item 1"), /* @__PURE__ */ React.createElement("div", {
+  className: "axoniusx-side-bar-item"
+}, "Menu Item 2"), /* @__PURE__ */ React.createElement("div", {
+  className: "axoniusx-side-bar-item"
+}, "Menu Item 3"))), /* @__PURE__ */ React.createElement(Dashboard, null)));
 
 var reactDom = {exports: {}};
 

@@ -128,10 +128,12 @@ react_production_min.useLayoutEffect=function(a,b){return S().useLayoutEffect(a,
 
 const React = /*@__PURE__*/getDefaultExportFromCjs(react.exports);
 
-const Button$1 = '';
+const Button = '';
 
-const Button = () => /* @__PURE__ */ React.createElement("button", {
-  className: "remote-btn"
-}, "hi");
+const App$1 = '';
 
-export { React as R, Button as default, getDefaultExportFromCjs as g, objectAssign as o, react as r };
+const App = () => /* @__PURE__ */ React.createElement("div", {
+  className: "axoniusx-card"
+}, "AxoniusX Card");
+
+export { React as R, App as default, getDefaultExportFromCjs as g, objectAssign as o, react as r };

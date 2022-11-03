@@ -4,7 +4,7 @@ import './App.scss';
 import Card from './Card';
 
 const App = () => (
-  <div className="card">
+  <div className="axoniusx-card">
       AxoniusX Card
   </div>
 );

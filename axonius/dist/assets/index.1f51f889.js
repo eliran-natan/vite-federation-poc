@@ -1,6 +1,7 @@
 import {importShared} from './__federation_fn_import.js'
-const {openBlock,createElementBlock,shallowRef,watchEffect,readonly,getCurrentScope,onScopeDispose,ref,watch,unref,getCurrentInstance,onMounted,nextTick,computed,i:isArray$2,a:isObject$2,capitalize:capitalize$1,camelize,b:isString$1,createElementVNode:createBaseVNode,c:hasOwn,warn,N:NOOP,d:isFunction$2,isVNode,Fragment,Comment,provide,inject,onBeforeUnmount,toRef,onUnmounted,isRef,e:computed$1,onBeforeMount,defineComponent,renderSlot,normalizeClass,normalizeStyle,mergeProps,useSlots,createBlock,withCtx,withDirectives,resolveDynamicComponent,createCommentVNode,createTextVNode,toDisplayString,createVNode,vShow,Transition,useAttrs:useAttrs$1,withModifiers,reactive,onUpdated,cloneVNode,Text,Teleport,onDeactivated,renderList,withKeys,createSlots,toRefs,f:isDate,normalizeProps,toRaw,vModelCheckbox,vModelRadio,h:h$1,resolveComponent,onBeforeUpdate,g:isPromise,resolveDirective,vModelText,toHandlers,guardReactiveProps,markRaw,effectScope,triggerRef,t:toRawType,shallowReactive,TransitionGroup,createApp,j:hyphenate,render} = await importShared('vue')
+const {resolveComponent,openBlock,createElementBlock,createVNode,withCtx,createElementVNode:createBaseVNode,toDisplayString,pushScopeId,popScopeId,shallowRef,watchEffect,readonly,getCurrentScope,onScopeDispose,ref,watch,unref,getCurrentInstance,onMounted,nextTick,computed,i:isArray$2,a:isObject$2,capitalize:capitalize$1,camelize,b:isString$1,c:hasOwn,warn,N:NOOP,d:isFunction$2,isVNode,Fragment,Comment,provide,inject,onBeforeUnmount,toRef,onUnmounted,isRef,e:computed$1,onBeforeMount,defineComponent,renderSlot,normalizeClass,normalizeStyle,mergeProps,useSlots,createBlock,withDirectives,resolveDynamicComponent,createCommentVNode,createTextVNode,vShow,Transition,useAttrs:useAttrs$1,withModifiers,reactive,onUpdated,cloneVNode,Text,Teleport,onDeactivated,renderList,withKeys,createSlots,toRefs,f:isDate,normalizeProps,toRaw,vModelCheckbox,vModelRadio,h:h$1,onBeforeUpdate,g:isPromise,resolveDirective,vModelText,toHandlers,guardReactiveProps,markRaw,effectScope,triggerRef,t:toRawType,shallowReactive,TransitionGroup,createApp,j:hyphenate,render} = await importShared('vue')
 
+import Card$1 from './__federation_expose_Card.b9ff4221.js';
 import { _ as _export_sfc$1 } from './_plugin-vue_export-helper.cdc0426e.js';
 
 true&&(function polyfill() {
@@ -47,12 +48,76 @@ true&&(function polyfill() {
     }
 }());
 
-const _sfc_main$2g = {};
+const style = '';
 
-function _sfc_render$z(_ctx, _cache) {
-  return (openBlock(), createElementBlock("h1", null, "This is the blue team"))
+const App_vue_vue_type_style_index_0_scoped_0107e49c_lang = '';
+
+const _withScopeId = n => (pushScopeId("data-v-0107e49c"),n=n(),popScopeId(),n);
+const _hoisted_1$14 = { class: "app" };
+const _hoisted_2$H = { class: "center error space-up" };
+const _hoisted_3$m = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/createBaseVNode("div", { class: "top-bar" }, " Axonius App (Vue on Vite) ", -1));
+const _hoisted_4$c = { class: "main" };
+const _hoisted_5$8 = { class: "side-bar-panel" };
+const _hoisted_6$2 = { class: "side-bar" };
+const _hoisted_7$1 = { class: "content" };
+const _hoisted_8$1 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/createBaseVNode("div", { class: "space-up" }, " Loading please wait ... ", -1));
+
+
+const _sfc_main$2g = {
+  __name: 'App',
+  setup(__props) {
+
+
+const SidebarItem = {
+  props: ['title', 'info'],
+  template: `
+    <div class="item">
+        <div class="title">
+            {{title}}
+        </div>
+        <div class="code info">
+            {{info}}
+        </div>
+    </div>
+    `
+};
+
+
+return (_ctx, _cache) => {
+  const _component_SuspenseWithErrors = resolveComponent("SuspenseWithErrors");
+
+  return (openBlock(), createElementBlock("div", _hoisted_1$14, [
+    createVNode(_component_SuspenseWithErrors, null, {
+      error: withCtx((props) => [
+        createBaseVNode("p", _hoisted_2$H, toDisplayString(props.error), 1)
+      ]),
+      default: withCtx(() => [
+        _hoisted_3$m,
+        createBaseVNode("div", _hoisted_4$c, [
+          createBaseVNode("div", _hoisted_5$8, [
+            createBaseVNode("div", _hoisted_6$2, [
+              createVNode(SidebarItem, { title: "Menu Item 1" }),
+              createVNode(SidebarItem, { title: "Menu Item 2" }),
+              createVNode(SidebarItem, { title: "Menu Item 3" })
+            ])
+          ]),
+          createBaseVNode("div", _hoisted_7$1, [
+            createVNode(Card$1),
+            createVNode(Card$1)
+          ])
+        ])
+      ]),
+      fallback: withCtx(() => [
+        _hoisted_8$1
+      ]),
+      _: 1
+    })
+  ]))
 }
-const App = /*#__PURE__*/_export_sfc$1(_sfc_main$2g, [['render',_sfc_render$z]]);
+}
+
+};
+const App = /*#__PURE__*/_export_sfc$1(_sfc_main$2g, [['__scopeId',"data-v-0107e49c"]]);
 
 /** Detect free variable `global` from Node.js. */
 var freeGlobal = typeof global == 'object' && global && global.Object === Object && global;

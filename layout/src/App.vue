@@ -14,9 +14,9 @@ function gotoWelcome() {
     view.framework = 'Vue'
 }
 
-function fetchAxoniusDashboard() {
+function fetchAxonius2Dashboard() {
     view.component = defineAsyncComponent(() =>
-        import("axonius/Dashboard")
+        import("axonius2/Dashboard")
     )
     view.framework = "Vue"
 }
@@ -24,7 +24,7 @@ function fetchAxoniusDashboard() {
 async function fetchAxoniusXDashboard() {
     view.component = await new Promise(async (resolve, reject) => {
         try {
-            const res = (await import("axoniusX/Button")).default;
+            const res = (await import("axoniusX/Dashboard")).default;
             resolve(ReactDOMServer.renderToString(res()))
         } catch (err) {
             reject(err);
@@ -68,13 +68,13 @@ const SidebarItem = {
                 </template>
                 <template #default>
                         <div class="top-bar">
-                            
+                            Shell App (Vue on Vite)
                         </div>
                         <div class="main">
                             <div class="side-bar-panel">
                                 <div class="side-bar">
                                     <sidebar-item title="Welcome" @click="gotoWelcome()"/>
-                                    <sidebar-item title="Axonius/Dashboard" @click="fetchAxoniusDashboard()"/>
+                                    <sidebar-item title="Axonius/Dashboard" @click="fetchAxonius2Dashboard()"/>
                                     <sidebar-item title="AxoniusX/Dashboard" @click="fetchAxoniusXDashboard()"/>
                                     <sidebar-item title="Mix" @click="load('AxoniusDashboard')"/>
                                 </div>
@@ -133,9 +133,6 @@ const SidebarItem = {
         width: 100%;
         background-color: #f8f9fa;
         border-radius: 10px;
-        div {
-            width: 100%;
-        }
     }
     .side-bar {
         display: flex;

@@ -1,23 +1,28 @@
 import { defineConfig } from 'vite'
-import reactRefresh from '@vitejs/plugin-react-refresh'
+import vue from '@vitejs/plugin-vue'
 import federation from '@originjs/vite-plugin-federation'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  resolve: {
+    alias: {
+      vue: 'vue/dist/vue.esm-bundler.js'
+    }
+  },
   plugins: [
-    reactRefresh(),
+    vue(),
     federation({
-      name: 'axoniusX',
+      name: 'axonius2',
       filename: 'remoteEntry.js',
       exposes: {
-        './Dashboard': './src/Dashboard.jsx',
-        './Card': './src/Card.jsx'
+          './Dashboard': './src/components/Dashboard.vue',
+          './Card': './src/components/Card.vue'
       }
     })
   ],
   build: {
+    minify: true,
     target: 'esnext',
-    minify: false,
     cssCodeSplit: false
   }
 })
