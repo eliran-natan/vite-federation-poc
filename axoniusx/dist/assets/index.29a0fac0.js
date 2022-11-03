@@ -46,4 +46,4 @@ true&&(function polyfill() {
 
 const style = '';
 
-__vitePreload(() => import('./bootstrap.665bd0f1.js'),true?["assets/bootstrap.665bd0f1.js","assets/__federation_expose_Card.113f27ae.js","assets/__federation_expose_Dashboard.48e3cedc.js"]:void 0);
+__vitePreload(() => import('./bootstrap.a2bb2c76.js'),true?["assets/bootstrap.a2bb2c76.js","assets/__federation_expose_Card.724f06eb.js","assets/__federation_expose_Dashboard.afb80a14.js"]:void 0);

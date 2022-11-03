@@ -1,4 +1,4 @@
-import App, { R as React } from './__federation_expose_Card.113f27ae.js';
+import App, { R as React } from './__federation_expose_Card.724f06eb.js';
 
 const Dashboard = () => /* @__PURE__ */ React.createElement("div", {
   class: "axoniusx-dashboard"
