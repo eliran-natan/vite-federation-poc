@@ -6,7 +6,9 @@ import Welcome from './Welcome.vue';
 
 const view = reactive({
   framework: 'Vue',
-  component: Welcome
+  component: Welcome,
+  componentA: null,
+  componentB: null
 })
 
 function gotoWelcome() {
@@ -26,6 +28,21 @@ function fetchAxoniusDashboard() {
     view.framework = "Vue"
 }
 
+async function fetchMix() {
+    view.componentA = defineAsyncComponent(() =>
+        import("axonius/Card")
+    )
+    view.componentB = await new Promise(async (resolve, reject) => {
+        try {
+            const res = (await import("axoniusX/Card")).default;
+            resolve(ReactDOMServer.renderToString(res()))
+        } catch (err) {
+            reject(err);
+        }
+    });
+    view.framework = "Mix"
+}
+
 async function fetchAxoniusXDashboard() {
     view.component = await new Promise(async (resolve, reject) => {
         try {
@@ -40,6 +57,14 @@ async function fetchAxoniusXDashboard() {
 
 const component = computed(() => {
   return view.component
+})
+
+const componentA = computed(() => {
+  return view.componentA
+})
+
+const componentB = computed(() => {
+  return view.componentB
 })
 
 const framework = computed(() => {
@@ -81,13 +106,22 @@ const SidebarItem = {
                                     <sidebar-item title="Welcome" @click="gotoWelcome()"/>
                                     <sidebar-item title="Axonius/Dashboard" @click="fetchAxoniusDashboard()"/>
                                     <sidebar-item title="AxoniusX/Dashboard" @click="fetchAxoniusXDashboard()"/>
-                                    <sidebar-item title="Mix" @click="gotoMix()"/>
+                                    <sidebar-item title="Mix" @click="fetchMix()"/>
                                 </div>
                             </div>
                             <div class="shell-content">
                                 <div v-if="framework">
                                     <component v-if="framework == 'Vue'" :is="component"></component>
                                     <div v-if="framework == 'React'" v-html="component"></div>
+                                    <div v-if="framework == 'Mix'">
+                                        <div class="shell-mix">
+                                            <h1>The Shell App can host particular components from different apps</h1>
+                                            <div class="mix-panel">
+                                                <component :is="componentA"></component>
+                                                <div v-html="componentB"></div> 
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -161,5 +195,19 @@ const SidebarItem = {
                 margin-top: 10px;
             }
         }
-    }    
+    }  
+    .shell-mix {
+        padding: 60px;
+        display: flex;
+        flex-direction: column;
+        h1 {
+            margin-bottom: 50px;
+            text-align: center;
+        } 
+    } 
+    .mix-panel {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    } 
 </style>

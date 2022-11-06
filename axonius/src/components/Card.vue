@@ -1,5 +1,5 @@
 <template>
-  <div class="axonius-card">Axonius2 Card</div>
+  <div class="axonius-card">Axonius Card</div>
 </template>
 
 <style>
